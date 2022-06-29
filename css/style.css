@@ -1,0 +1,208 @@
+* {
+    box-sizing: border-box;
+    font-family: Roboto Flex, sans-serif;
+}
+body {
+    margin: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.hero {
+    padding-top: 50px;
+    padding-bottom: 34px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    gap: 24px;
+    justify-items: start;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 158px;
+    padding-right: 156px;
+    max-width: 1440px;
+}
+
+.hero__logo {
+    position: absolute;
+    left: 158px;
+}
+
+.hero__content {
+    grid-column: span 9;
+    margin-top: 210px;
+}
+
+.hero__header {
+    margin-top: 0;
+    margin-bottom: 56px;
+    font-weight: 750;
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: 1px;
+}
+
+.hero__button-block {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.hero__button-block::before {
+    content: 'Скоро запуск';
+    position: absolute;
+    padding: 6px 18px; 
+    top: -11px;
+    left: 111px;
+    border-radius: 8px;
+    font-family: Roboto Flex, sans-serif;
+    font-weight: 750;
+    font-size: 14px;
+    line-height: 20px;
+    color: #fff;
+    background-color: #FF6700;
+    transform: rotate(-15deg);
+    z-index: 5;
+}
+
+.hero__btn:not(:last-child) {
+    margin-right: 24px;
+}
+
+.hero__btn-text {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 36px;
+    background-color: #6A6A6A;
+}
+
+.hero__btn-text_app {
+    padding: 12px 22px 13px 56px;
+}
+
+.hero__btn-text_app::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 36px;
+    left: 15px;
+    background-image: url('../img/apple-logo.svg');
+    background-repeat: no-repeat;
+}
+
+.hero__btn-text_google {
+    padding: 12px 26px 13px 68px;
+}
+
+.hero__btn-text_google::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 36px;
+    top: 16px;
+    left: 22px;
+    background-image: url('../img/google-logo.svg');
+    background-repeat: no-repeat;
+}
+
+.hero__btn-inst {
+    display: block;
+    margin-bottom: 2px;
+    font-weight: 550;
+    font-style: 12px;
+    line-height: 16px;
+    color: #fff;
+}
+
+.hero__btn-as {
+    padding-top: 21px;
+    background-image: url('../img/app-store.svg');
+    background-repeat: no-repeat;
+}
+
+.hero__btn-gp {
+    padding-top: 21px;
+    width: 106px;
+    background-image: url('../img/google-play.svg');
+    background-repeat: no-repeat;
+}
+
+.hero__big-img {
+    grid-column: span 4;
+    margin-top: 22px;
+}
+
+.hero__pagination-list {
+    grid-column: 16;
+    margin-top: 50px;
+    margin-bottom: 0;
+    padding: 0;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero__pagination-item:not(:last-child) {
+    margin-bottom: 79%;
+}
+
+.pagination-dot {
+    display: block;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    background-image: url('../img/pagination.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.first-page {
+    border: 1px solid #5337FF;
+    background-image: url('../img/pagination-active.svg');
+}
+
+.first-page::after {
+    content: '01';
+    position: absolute;
+    top: -3px;
+    left: 22px;
+    font-weight: 750;
+    font-size: 20px;
+    line-height: 24px;
+    color: #5337FF;
+}
+
+.hero__nextpage-link {
+    margin-top: 19px;
+    grid-column: 7 / span 4;
+    place-self: center;
+    font-weight: 550;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.7px;
+    color: #090909;
+}
+
+.hero__nextpage-link::before {
+    content: '';
+    display: inline-block;
+    margin-right: 14px;
+    width: 13px;
+    height: 8px;
+    background-image: url('../img/down.svg');
+    background-repeat: no-repeat;
+}
